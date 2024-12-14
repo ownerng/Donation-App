@@ -3,13 +3,12 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router';
 import { CounterProvider } from './context/CounterContext';
 import ShowCounter from './pages/Counter/Counter';
 import DataCounter from './pages/DataCounter/DataCounter';
-import Header from './components/Header/Header';
 
 const App: React.FC = () => {
   return (
     <CounterProvider>
       <Router>
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto">
           <Routes>
             <Route path="/" element={<Navigate to="/show-counter" replace />} />
             <Route path="/show-counter" element={<ShowCounter />} />
